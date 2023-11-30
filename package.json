@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.2",
+    "bootstrap": "^5.3.1",
+    "deck.gl": "^8.9.32",
+    "ol": "^8.1.0"
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+</head>
+<body>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;height: 70px; margin-bottom: -2px;">
+   
+      <label>
+        <p>Base Layer: 
+        <select id="baseMapSelector" onchange="changeBaseMap()">
+            <option value="googleMaps">Google Maps</option>
+            <option value="yandex">Yandex Map</option>
+            <option value="openStreet">Open Street Map</option>
+        </select></p>
+      </label>
+      <p>Overlayers:
+      <label>
+        <input type="checkbox" id="drzavaCheckbox" onclick="toggleLayerVisibility(drzavaGeoserverLayer)">
+        Drzava
+      </label>
+      <label>
+        <input type="checkbox" id="rezervatiCheckbox" onclick="toggleLayerVisibility(rezervatiGeoserverLayer)">
+        Rezervati prirode
+      </label>
+      <label>
+        <input type="checkbox" id="termoelektraneCheckbox" onclick="toggleLayerVisibility(termoelektraneGeoserverLayer)">
+        Termoelektrane
+      </label>
+      <label>
+        <input type="checkbox" id="rekeCheckbox" onclick="toggleLayerVisibility(rekeGeoserverLayer)">
+        Reke
+      </label>
+      <label>
+        <input type="checkbox" id="pokrajnaCheckbox" onclick="toggleLayerVisibility(pokrajnaGeoserverLayer)">
+        Pokrajna
+      </label>
+      <label>
+        <input type="checkbox" id="opstineCheckbox" onclick="toggleLayerVisibility(opstineGeoserverLayer)">
+       Opstine
+      </label>
+      <label>
+        <input type="checkbox" id="CenejCheckbox" onclick="toggleLayerVisibility(cenejGeoserverLayer)">
+       Cenej
+      </label></p>
+    
+  </nav>
+      <!-- Uključivanje OpenLayers biblioteke -->
+    <div id="map"></div>
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
